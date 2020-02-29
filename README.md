@@ -1,4 +1,4 @@
-# OpenID Connect Sample
+# OpenID Connect Sample in Node.js
 
 This is a sample application showing how to configure and enable OpenID Connect middleware in a Node.js web application with Express, openid-client and Passport.
 
