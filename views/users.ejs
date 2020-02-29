@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- in views/users.ejs -->
+<html>
+  <head>
+    <title>User Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>Welcome <em><%= name %></em></h1>
+      <br />
+
+      <p>Here are your user details:</p>
+
+      <b>name:</b> <%= name %><br />
+      <b>country:</b> <%= country %><br />
+      <b>givenname:</b> <%= givenname %><br />
+      <b>surname:</b> <%= surname %><br />
+
+      <form action="/logout">
+        <input type="submit" value="Logout">
+      </form>
+    </div>
+  </body>
+</html>
