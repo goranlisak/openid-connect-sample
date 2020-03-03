@@ -48,7 +48,6 @@ Issuer.discover('https://nodejs-sample.criipto.id')
     passport.use(
       'oidc',
       new Strategy({ client }, (tokenSet, userinfo, done) => {
-        id_token = tokenSet.id_token; // save id_token for logout
         return done(null, tokenSet.claims());
       })
     );
@@ -78,7 +77,7 @@ Issuer.discover('https://nodejs-sample.criipto.id')
 
     // start logout request
     app.get('/logout', (req, res) => {
-      res.redirect(client.endSessionUrl({ id_token_hint: id_token }));
+      res.redirect(client.endSessionUrl());
     });
 
     // logout callback
